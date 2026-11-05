@@ -16,9 +16,9 @@ namespace matrix {
  * @warning Выделенная память освобождается через free_matrix().
  */
 struct Matrix {
-    double** data; ///< Двумерный массив элементов.
-    int rows;      ///< Количество строк.
-    int cols;      ///< Количество столбцов.
+    double** data;  ///< Двумерный массив элементов.
+    int rows;       ///< Количество строк.
+    int cols;       ///< Количество столбцов.
 };
 
 /**
@@ -43,7 +43,6 @@ Matrix create_matrix(int rows, int cols);
  * поскольку матрица передаётся по значению.
  */
 void free_matrix(Matrix m);
-
 
 /**
  * @brief Складывает две матрицы.
@@ -102,5 +101,4 @@ Matrix matrix_from_array(double* data, int rows, int cols);
  */
 Matrix matrix_identity(int size);
 
-
-}
+}  // namespace matrix

@@ -1,8 +1,9 @@
 
 #include "matrix.h"
-#include <stdexcept>
-#include <iostream>
+
 #include <iomanip>
+#include <iostream>
+#include <stdexcept>
 
 namespace matrix {
 
@@ -41,9 +42,8 @@ void free_matrix(Matrix m) {
     delete[] m.data;
 }
 Matrix matrix_add(Matrix a, Matrix b) {
-    if (a.data == nullptr || b.data == nullptr ||
-        a.rows <= 0 || a.cols <= 0 ||
-        b.rows <= 0 || b.cols <= 0) {
+    if (a.data == nullptr || b.data == nullptr || a.rows <= 0 || a.cols <= 0 || b.rows <= 0 ||
+        b.cols <= 0) {
         throw std::invalid_argument("Invalid matrix");
     }
 
@@ -62,9 +62,8 @@ Matrix matrix_add(Matrix a, Matrix b) {
     return result;
 }
 Matrix matrix_multiply(Matrix a, Matrix b) {
-    if (a.data == nullptr || b.data == nullptr ||
-        a.rows <= 0 || a.cols <= 0 ||
-        b.rows <= 0 || b.cols <= 0) {
+    if (a.data == nullptr || b.data == nullptr || a.rows <= 0 || a.cols <= 0 || b.rows <= 0 ||
+        b.cols <= 0) {
         throw std::invalid_argument("Invalid matrix");
     }
 
@@ -117,8 +116,7 @@ void print_matrix(Matrix m) {
     }
 
     if (m.rows > max_rows || m.cols > max_cols) {
-        std::cout << "Matrix " << m.rows << "x" << m.cols
-                  << " (shortened output)\n";
+        std::cout << "Matrix " << m.rows << "x" << m.cols << " (shortened output)\n";
     }
 }
 
@@ -150,4 +148,4 @@ Matrix matrix_identity(int size) {
 
     return result;
 }
-}
+}  // namespace matrix

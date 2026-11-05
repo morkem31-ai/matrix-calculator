@@ -1,5 +1,6 @@
-#include "matrix.h"
 #include <iostream>
+
+#include "matrix.h"
 
 int main() {
     double arr_a[] = {1, 2, 3, 4};
@@ -29,7 +30,6 @@ int main() {
     matrix::print_matrix(identity);
 
     matrix::free_matrix(identity);
-
 
     matrix::free_matrix(a);
     matrix::free_matrix(b);

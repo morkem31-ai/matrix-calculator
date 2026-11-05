@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
-#include "matrix.h"
+
 #include <stdexcept>
+
+#include "matrix.h"
 
 TEST(MatrixTest, CreateMatrix) {
     matrix::Matrix a = matrix::create_matrix(3, 4);
@@ -87,7 +89,6 @@ TEST(MatrixTest, IdentityInvalidSize) {
     EXPECT_THROW(matrix::matrix_identity(-3), std::invalid_argument);
 }
 
-
 TEST(MatrixTest, CreateMatrixInvalidSize) {
     EXPECT_THROW(matrix::create_matrix(0, 3), std::invalid_argument);
     EXPECT_THROW(matrix::create_matrix(3, -1), std::invalid_argument);
@@ -111,8 +112,3 @@ TEST(MatrixTest, MultiplicationSizeMismatch) {
     matrix::free_matrix(a);
     matrix::free_matrix(b);
 }
-
-
-
-
-
