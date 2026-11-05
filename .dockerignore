@@ -1,0 +1,8 @@
+
+build/
+docs/
+.git/
+.vscode/
+*.o
+ctest_log.txt
+valgrind_log.txt

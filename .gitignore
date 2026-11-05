@@ -1,0 +1,11 @@
+
+build/
+docs/html/
+.vscode/
+*.o
+*.a
+*.log
+ctest_log.txt
+valgrind_log.txt
+compile_commands.json
+.cache/
